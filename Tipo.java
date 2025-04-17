@@ -1,0 +1,10 @@
+public enum Tipo {
+    PROCESADOR,
+    MEMORIA_RAM,
+    SSD,
+    HDD,
+    TARJETA_GRAFICA,
+    MOTHERBOARD,
+    FUENTE_DE_PODER,
+    GABINETE;
+}
