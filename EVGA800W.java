@@ -37,7 +37,7 @@ public class EVGA800W implements FuenteAlimentacion {
         tipo = Tipo.FUENTE_ALIMENTACION;
         nombre = "EVGA 800W";
         descripcion = "";
-        precio = 50.0;
+        precio = 100.25;
         potenciaMaxima = 800;
     }
 }

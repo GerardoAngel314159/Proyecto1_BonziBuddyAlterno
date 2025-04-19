@@ -37,6 +37,6 @@ public class Corsair800W implements FuenteAlimentacion {
         tipo = Tipo.FUENTE_ALIMENTACION;
         nombre = "Corsair 800W";
         descripcion = "";
-        precio = 50.0;
+        precio = 149.89;
     }
 }

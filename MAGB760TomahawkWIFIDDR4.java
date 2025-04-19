@@ -38,6 +38,6 @@ public class MAGB760TomahawkWIFIDDR4 implements Motherboard{
         nombre = "MAG B760 Tomahawk WIFI DDR4";
         descripcion = "Motherboard MSI MAG B760 Tomahawk WIFI DDR4";
         chipsetSoportado = "B760";
-        precio = 50.0;
+        precio = 236.15;
     }
 }

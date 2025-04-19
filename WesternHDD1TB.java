@@ -42,7 +42,7 @@ public class WesternHDD1TB implements HDD{
         tipo = Tipo.HDD;
         nombre = "Western Digital Blue 1TB";
         descripcion = "Disco HDD Western Digital Blue de 1TB";
-        precio = 50.0;
+        precio = 32.35;
         capacidadAlmacenamiento = 1000;
         tipoAlmacenamiento = "HDD";
     }

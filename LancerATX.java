@@ -32,7 +32,7 @@ public class LancerATX implements Gabinetes{
         tipo = Tipo.GABINETE;
         nombre = "Lancer ATX";
         descripcion = "";
-        precio = 50.0;
+        precio = 51.60;
     }
 
 }

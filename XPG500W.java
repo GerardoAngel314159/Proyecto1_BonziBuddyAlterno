@@ -37,7 +37,7 @@ public class XPG500W implements FuenteAlimentacion {
         tipo = Tipo.FUENTE_ALIMENTACION;
         nombre = "XPG 500W";
         descripcion = "";
-        precio = 50.0;
+        precio = 40.07;
         potenciaMaxima = 500;
     }
 }

@@ -37,7 +37,7 @@ public class Corei3 implements Procesador{
         tipo = Tipo.PROCESADOR;
         nombre = "Core i3-13100";
         descripcion = "Procesador Intel Core i3-13100 ideal para tareas de oficina y juegos ligeros";
-        precio = 50.0;
+        precio = 86.71;
         nucleos = 4;
     }
 

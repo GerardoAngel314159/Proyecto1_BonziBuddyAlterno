@@ -42,7 +42,7 @@ public class WesternHDD500GB implements HDD{
         tipo = Tipo.HDD;
         nombre = "Western Digital Blue 500GB";
         descripcion = "Disco HDD Western Digital Blue de 500GB";
-        precio = 50.0;
+        precio = 16.95;
         capacidadAlmacenamiento = 500;
         tipoAlmacenamiento = "HDD";
     }

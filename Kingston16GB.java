@@ -37,7 +37,7 @@ public class Kingston16GB implements Ram{
         tipo = Tipo.MEMORIA_RAM;
         nombre = "Kingston 16GB";
         descripcion = "Memoria RAM Kingston de 16GB";
-        precio = 50.0;
+        precio = 33.65;
         tamañoMemoria = 16;
     }
 }

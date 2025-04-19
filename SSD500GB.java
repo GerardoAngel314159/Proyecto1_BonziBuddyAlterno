@@ -42,7 +42,7 @@ public class SSD500GB implements SSD{
         tipo = Tipo.SSD;
         nombre = "Kingston 500GB";
         descripcion = "Disco SSD Kingston de 500GB";
-        precio = 50.0;
+        precio = 17.50;
         capacidadAlmacenamiento = 500;
         tipoAlmacenamiento = "SSD";
     }

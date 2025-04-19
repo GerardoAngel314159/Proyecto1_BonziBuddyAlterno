@@ -37,7 +37,7 @@ public class GTX1660 implements GPU{
         tipo = Tipo.GPU;
         nombre = "GTX 1660";
         descripcion = "Tarjeta gráfica NVIDIA GTX 1660";
-        precio = 350.0;
+        precio = 200.54;
         tipoMemoriaGPU = "GDDR5";
     }
 }

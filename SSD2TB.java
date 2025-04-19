@@ -42,7 +42,7 @@ public class SSD2TB implements SSD{
         tipo = Tipo.MEMORIA_RAM;
         nombre = "Kingston 2TB";
         descripcion = "Disco SSD Kingston de 2TB";
-        precio = 50.0;
+        precio = 54.71;
         capacidadAlmacenamiento = 2000;
         tipoAlmacenamiento = "SSD";
     }

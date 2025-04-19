@@ -42,7 +42,7 @@ public class SSD4TB implements SSD{
         tipo = Tipo.SSD;
         nombre = "Kingston 4TB";
         descripcion = "Disco SSD Kingston de 4TB";
-        precio = 50.0;
+        precio = 164.94;
         capacidadAlmacenamiento = 4000;
         tipoAlmacenamiento = "SSD";
     }

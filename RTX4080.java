@@ -37,7 +37,7 @@ public class RTX4080 implements GPU{
         tipo = Tipo.GPU;
         nombre = "RTX 3060";
         descripcion = "Tarjeta gráfica NVIDIA RTX 3060";
-        precio = 350.0;
+        precio = 957.79;
         tipoMemoriaGPU = "GDDR6";
     }
 }

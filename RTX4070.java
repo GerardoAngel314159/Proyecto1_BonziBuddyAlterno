@@ -37,7 +37,7 @@ public class RTX4070 implements GPU{
         tipo = Tipo.GPU;
         nombre = "RTX 4070";
         descripcion = "Tarjeta gráfica NVIDIA RTX 4070";
-        precio = 350.0;
+        precio = 679.96;
         tipoMemoriaGPU = "GDDR6X";
     }
 }

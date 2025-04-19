@@ -38,7 +38,7 @@ public class Adata16GB implements Ram{
         tipo = Tipo.MEMORIA_RAM;
         nombre = "Adata 16GB";
         descripcion = "Memoria RAM Adata de 16GB";
-        precio = 50.0;
+        precio = 33.60;
         tamañoMemoria = 16;
     }
 

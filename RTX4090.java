@@ -37,7 +37,7 @@ public class RTX4090 implements GPU{
         tipo = Tipo.GPU;
         nombre = "RTX 4090";
         descripcion = "Tarjeta gráfica NVIDIA RTX 4090";
-        precio = 350.0;
+        precio = 1759.17;
         tipoMemoriaGPU = "GDDR6X";
     }
 }

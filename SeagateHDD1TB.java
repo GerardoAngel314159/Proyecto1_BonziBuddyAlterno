@@ -42,7 +42,7 @@ public class SeagateHDD1TB implements HDD{
         tipo = Tipo.HDD;
         nombre = "Seagate Barracuda 1TB";
         descripcion = "Disco HDD Seagate Barracuda de 1TB";
-        precio = 50.0;
+        precio = 58.17;
         capacidadAlmacenamiento = 1000;
         tipoAlmacenamiento = "HDD";
     }

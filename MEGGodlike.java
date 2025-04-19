@@ -38,6 +38,6 @@ public class MEGGodlike implements Motherboard{
         nombre = "MEG Godlike";
         descripcion = "Motherboard MSI MEG Godlike";
         chipsetSoportado = "Z790";
-        precio = 50.0;
+        precio = 282.74;
     }
 }

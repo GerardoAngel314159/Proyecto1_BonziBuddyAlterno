@@ -37,7 +37,7 @@ public class Corsair1500W implements FuenteAlimentacion {
         tipo = Tipo.FUENTE_ALIMENTACION;
         nombre = "Corsair 1500W";
         descripcion = "";
-        precio = 50.0;
+        precio = 399.58;
         potenciaMaxima = 1500;
     }
 }

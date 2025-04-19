@@ -32,7 +32,7 @@ public class H6FlowATX implements Gabinetes{
         tipo = Tipo.GABINETE;
         nombre = "H6 Flow ATX";
         descripcion = "";
-        precio = 50.0;
+        precio = 145.38;
     }
 
 }
