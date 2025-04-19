@@ -8,6 +8,5 @@ public interface Procesador {
     public String getDescripcion();
     
     public void printNombre();
-
     public void ensamblarProcesador();
 }

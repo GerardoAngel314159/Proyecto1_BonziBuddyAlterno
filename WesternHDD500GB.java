@@ -1,4 +1,4 @@
-public class WesternHDD2TB implements HDD{
+public class WesternHDD500GB implements HDD{
 
     String marca;
     String nombre;
@@ -40,10 +40,10 @@ public class WesternHDD2TB implements HDD{
     public void ensamblarHDD(){
         marca = "Western Digital Blue";
         tipo = Tipo.HDD;
-        nombre = "Western Digital Blue 2TB";
-        descripcion = "Disco HDD Western Digital Blue de 2TB";
+        nombre = "Western Digital Blue 500GB";
+        descripcion = "Disco HDD Western Digital Blue de 500GB";
         precio = 50.0;
-        capacidadAlmacenamiento = 2000;
+        capacidadAlmacenamiento = 500;
         tipoAlmacenamiento = "HDD";
     }
 
