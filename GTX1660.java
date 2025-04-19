@@ -1,14 +1,14 @@
-public class MEGGodlike implements Motherboard{
-
+public class GTX1660 implements GPU{
+ 
     String marca;
     String nombre;
     Tipo tipo;
     double precio;
     String descripcion;
-    String chipsetSoportado;
+    String tipoMemoriaGPU;
     
-    public String getChipsetSoportado(){
-        return chipsetSoportado;
+    public String getTipoMemoriaGPU(){
+        return tipoMemoriaGPU;
     }
 
     public String getMarca(){
@@ -29,15 +29,15 @@ public class MEGGodlike implements Motherboard{
     }
 
     public void printNombre(){
-        System.out.println("El tipo de motherboard es: " + nombre);
+        System.out.println("El tipo de GPU es: " + nombre);
     }   
 
-    public void ensamblarMotherboard(){
-        marca = "MSI";
-        tipo = Tipo.MOTHERBOARD;
-        nombre = "MEG Godlike";
-        descripcion = "Motherboard MSI MEG Godlike";
-        chipsetSoportado = "Z790";
-        precio = 50.0;
+    public void ensamblarTarjetaGrafica(){
+        marca = "NVIDIA";
+        tipo = Tipo.GPU;
+        nombre = "GTX 1660";
+        descripcion = "Tarjeta gráfica NVIDIA GTX 1660";
+        precio = 350.0;
+        tipoMemoriaGPU = "GDDR5";
     }
 }

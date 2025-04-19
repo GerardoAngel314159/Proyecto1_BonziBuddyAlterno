@@ -1,16 +1,16 @@
-public class Corei3 implements Procesador{
-
+public class EVGA1000W implements FuenteAlimentacion {
+    
     String marca;
     String nombre;
     Tipo tipo;
     double precio;
     String descripcion;
-    int nucleos;
+    int potenciaMaxima;
 
-    public int getNucleos(){
-        return nucleos;
+    public int getPotenciaMaxima(){
+        return potenciaMaxima;
     }
-
+    
     public String getMarca(){
         return marca;
     }
@@ -29,16 +29,15 @@ public class Corei3 implements Procesador{
     }
 
     public void printNombre(){
-        System.out.println("El tipo de cpu es: " + nombre);
-    } 
+        System.out.println("El tipo de fuente de alimentacion es: " + nombre);
+    }  
 
-    public void ensamblarProcesador(){
-        marca = "Intel";
-        tipo = Tipo.PROCESADOR;
-        nombre = "Core i3-13100";
-        descripcion = "Procesador Intel Core i3-13100 ideal para tareas de oficina y juegos ligeros";
+    public void ensamblarFuenteAlimentacion(){
+        marca = "EVGA";
+        tipo = Tipo.FUENTE_ALIMENTACION;
+        nombre = "EVGA 1000W";
+        descripcion = "";
         precio = 50.0;
-        nucleos = 4;
+        potenciaMaxima = 1000;
     }
-
 }

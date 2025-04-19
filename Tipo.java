@@ -5,6 +5,6 @@ public enum Tipo {
     HDD,
     TARJETA_GRAFICA,
     MOTHERBOARD,
-    FUENTE_DE_PODER,
+    FUENTE_ALIMENTACION,
     GABINETE;
 }

@@ -1,11 +1,12 @@
-public abstract class TarjetaGrafica{
+public class RTX4090 implements GPU{
+ 
     String marca;
     String nombre;
     Tipo tipo;
     double precio;
     String descripcion;
     String tipoMemoriaGPU;
-
+    
     public String getTipoMemoriaGPU(){
         return tipoMemoriaGPU;
     }
@@ -31,5 +32,12 @@ public abstract class TarjetaGrafica{
         System.out.println("El tipo de GPU es: " + nombre);
     }   
 
-    public abstract void ensamblarTarjetaGrafica();
+    public void ensamblarTarjetaGrafica(){
+        marca = "NVIDIA";
+        tipo = Tipo.GPU;
+        nombre = "RTX 4090";
+        descripcion = "Tarjeta gráfica NVIDIA RTX 4090";
+        precio = 350.0;
+        tipoMemoriaGPU = "GDDR6X";
+    }
 }

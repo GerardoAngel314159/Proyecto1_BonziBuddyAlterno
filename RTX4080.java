@@ -1,14 +1,14 @@
-public class MEGGodlike implements Motherboard{
-
+public class RTX4080 implements GPU{
+ 
     String marca;
     String nombre;
     Tipo tipo;
     double precio;
     String descripcion;
-    String chipsetSoportado;
+    String tipoMemoriaGPU;
     
-    public String getChipsetSoportado(){
-        return chipsetSoportado;
+    public String getTipoMemoriaGPU(){
+        return tipoMemoriaGPU;
     }
 
     public String getMarca(){
@@ -29,15 +29,15 @@ public class MEGGodlike implements Motherboard{
     }
 
     public void printNombre(){
-        System.out.println("El tipo de motherboard es: " + nombre);
+        System.out.println("El tipo de GPU es: " + nombre);
     }   
 
-    public void ensamblarMotherboard(){
-        marca = "MSI";
-        tipo = Tipo.MOTHERBOARD;
-        nombre = "MEG Godlike";
-        descripcion = "Motherboard MSI MEG Godlike";
-        chipsetSoportado = "Z790";
-        precio = 50.0;
+    public void ensamblarTarjetaGrafica(){
+        marca = "NVIDIA";
+        tipo = Tipo.GPU;
+        nombre = "RTX 3060";
+        descripcion = "Tarjeta gráfica NVIDIA RTX 3060";
+        precio = 350.0;
+        tipoMemoriaGPU = "GDDR6";
     }
 }
