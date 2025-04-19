@@ -1,6 +1,5 @@
 public abstract class AbstractFactory{
 
-    public Object getComponente(String tipoComponente){
-    }
+    public abstract Object getComponente(String tipoComponente);
 
 }

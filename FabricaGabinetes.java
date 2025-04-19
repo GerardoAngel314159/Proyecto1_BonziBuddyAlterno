@@ -6,19 +6,19 @@ public class FabricaGabinetes extends AbstractFactory{
     }
 
 
-    public GabinetesNZXT getGabinetesNZXT(String tipoGabinete){
+    public Gabinetes getGabinete(String tipoGabinete){
         if(tipoGabinete == null){
-            return null
-        }else if{
-            return H6FlowATX();
+            return null;
         }
-    }
 
-    public GabinetesYeyian getGabinetesyYeyian(String tipoGabinete){
-        if(tipoGabinete == null){
-            return null
-        }else if{
-            return LancerATX();
+        switch (tipoGabinete.toLowerCase()){
+            case "h6flowatx" -> {
+                return new H6FlowATX();
+            }
+            case "lanceratx" -> {
+                return new LancerATX();
+            }
+            default -> throw new AssertionError("Gabinete no encontrado");
         }
     }
 }
