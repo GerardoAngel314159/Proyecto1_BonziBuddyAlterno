@@ -1,3 +1,8 @@
+/**
+ * Interfaz Motherboard
+ *
+ * Representa las operaciones basicas que debe implementar una placa base
+ */
 public interface Motherboard {
 
     public String getMarca();
