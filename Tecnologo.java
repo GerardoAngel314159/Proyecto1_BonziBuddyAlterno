@@ -11,8 +11,6 @@ public class Tecnologo{
                 case FUENTE_ALIMENTACION -> new FabricaFuenteAlimentacion();
                 case GABINETE -> new FabricaGabinetes();
                 default -> null;
-            };
-
-            
+        };           
     }
 }

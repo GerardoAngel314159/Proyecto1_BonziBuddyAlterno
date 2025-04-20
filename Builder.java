@@ -47,7 +47,7 @@ public class Builder{
         this.motherboard = motherboard;
     }
 
-    public void printNombre(){
+    public void muestraEnsamblaje(){
 
         System.out.println("Hasta ahora el ensamblaje de la computadora es el siguiente:\n");
 
@@ -79,5 +79,32 @@ public class Builder{
         fuenteAlimentacion.ensamblarFuenteAlimentacion();
         gabinete.ensamblarGabinete();
         motherboard.ensamblarMotherboard();
+    }
+
+    public void muestraPrecio(){
+        double precioTotal = 0;
+        precioTotal += gpu.getPrecio();
+        precioTotal += hdd.getPrecio();
+        precioTotal += ssd.getPrecio();
+        for(RAM ram : memoriaRAM){
+            precioTotal += ram.getPrecio();
+        }
+        precioTotal += procesador.getPrecio();
+        precioTotal += fuenteAlimentacion.getPrecio();
+        precioTotal += gabinete.getPrecio();
+        precioTotal += motherboard.getPrecio();
+
+        System.out.println("El precio total de la computadora es: " + precioTotal);
+    }
+
+    public void reiniciar(){
+        gpu = null;
+        hdd = null;
+        ssd = null;
+        memoriaRAM = new ArrayList<>();
+        procesador = null;
+        fuenteAlimentacion = null;
+        gabinete = null;
+        motherboard = null;
     }
 } 
