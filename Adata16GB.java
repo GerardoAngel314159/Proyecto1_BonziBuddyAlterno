@@ -7,32 +7,32 @@ public class Adata16GB implements RAM {
     /**
      * Marca del modulo de RAM.
      */
-    String marca;
+    private String marca;
 
     /**
      * Nombre del modelo de RAM.
      */
-    String nombre;
+    private String nombre;
 
     /**
      * Tipo de dispositivo.
      */
-    Tipo tipo;
+    private Tipo tipo;
 
     /**
      * Precio en dolares del modulo.
      */
-    double precio;
+    private double precio;
 
     /**
      * Descripcion del producto.
      */
-    String descripcion;
+    private String descripcion;
 
     /**
      * Tamano de memoria en gigabytes.
      */
-    int tamañoMemoria;
+    private int tamanioMemoria;
 
     /**
      * Obtiene la marca del modulo de RAM.
@@ -50,8 +50,8 @@ public class Adata16GB implements RAM {
      * @return tamano de memoria en gigabytes
      */
     @Override
-    public int getTamañoMemoria() {
-        return tamañoMemoria;
+    public int getTamanioMemoria() {
+        return tamanioMemoria;
     }
 
     /**
@@ -111,7 +111,7 @@ public class Adata16GB implements RAM {
         nombre = "Adata 16GB";
         descripcion = "Memoria RAM Adata de 16GB";
         precio = 33.60;
-        tamañoMemoria = 16;
+        tamanioMemoria = 16;
     }
 
 }
