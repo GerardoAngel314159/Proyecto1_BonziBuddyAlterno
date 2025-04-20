@@ -1,8 +1,8 @@
 /**
- * Clase que representa un procesador Intel Core i3-13100.
+ * Clase que representa un procesador Ryzen7 7950X3D.
  * Implementa la interfaz Procesador.
  */
-public class Corei3 implements Procesador {
+public class Ryzen97950X3D implements ProcesadorAMD {
 
     /**
      * Marca del procesador.
@@ -107,11 +107,12 @@ public class Corei3 implements Procesador {
      */
     @Override
     public void ensamblarProcesador() {
-        marca = "Intel";
+        marca = "Ryzen";
         tipo = Tipo.PROCESADOR;
-        nombre = "Core i3-13100";
-        descripcion = "Procesador Intel Core i3-13100 ideal para tareas de oficina y juegos ligeros";
-        precio = 86.71;
-        nucleos = 4;
+        nombre = "Ryzen9-7950X3D";
+        descripcion = "Procesador Ryzen9-7950X3D ideal para tener mas rendimiento en juegos y creadores exigentes";
+        precio = 495.97;
+        nucleos = 16;
     }
 }
+

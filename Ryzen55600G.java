@@ -1,8 +1,8 @@
 /**
- * Clase que representa un procesador Intel Core i3-13100.
+ * Clase que representa un procesador Ryzen5 5600G.
  * Implementa la interfaz Procesador.
  */
-public class Corei3 implements Procesador {
+public class Ryzen55600G implements ProcesadorAMD {
 
     /**
      * Marca del procesador.
@@ -107,11 +107,12 @@ public class Corei3 implements Procesador {
      */
     @Override
     public void ensamblarProcesador() {
-        marca = "Intel";
+        marca = "Ryzen";
         tipo = Tipo.PROCESADOR;
-        nombre = "Core i3-13100";
-        descripcion = "Procesador Intel Core i3-13100 ideal para tareas de oficina y juegos ligeros";
-        precio = 86.71;
+        nombre = "Ryzen5-5600G";
+        descripcion = "Procesador Ryzen5-5600G ideal para tareas de oficina y juegos ligeros";
+        precio = 134.40;
         nucleos = 4;
     }
 }
+
