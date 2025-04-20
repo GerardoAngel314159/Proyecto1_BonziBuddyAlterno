@@ -1,3 +1,7 @@
+/**
+ * Clase que representa un HDD Western de 1TB.
+ * Implementa la interfaz HDD.
+ */
 public class WesternHDD1TB implements HDD{
 
     /** 
