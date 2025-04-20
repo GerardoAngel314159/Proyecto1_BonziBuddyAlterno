@@ -3,7 +3,7 @@ public enum Tipo {
     MEMORIA_RAM,
     SSD,
     HDD,
-    TARJETA_GRAFICA,
+    GPU,
     MOTHERBOARD,
     FUENTE_ALIMENTACION,
     GABINETE;

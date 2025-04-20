@@ -32,7 +32,7 @@ public class GTX1660 implements GPU{
         System.out.println("El tipo de GPU es: " + nombre);
     }   
 
-    public void ensamblarTarjetaGrafica(){
+    public void ensamblarGpu(){
         marca = "NVIDIA";
         tipo = Tipo.GPU;
         nombre = "GTX 1660";
@@ -40,4 +40,5 @@ public class GTX1660 implements GPU{
         precio = 200.54;
         tipoMemoriaGPU = "GDDR5";
     }
+
 }
