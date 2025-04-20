@@ -32,7 +32,7 @@ public class RTX3060 implements GPU{
         System.out.println("El tipo de GPU es: " + nombre);
     }   
 
-    public void ensamblarTarjetaGrafica(){
+    public void ensamblarGpu(){
         marca = "NVIDIA";
         tipo = Tipo.GPU;
         nombre = "RTX 3060";

@@ -1,4 +1,4 @@
-public interface Ram {
+public interface RAM {
     public String getMarca();
     public int getTamañoMemoria();
     public String getNombre();

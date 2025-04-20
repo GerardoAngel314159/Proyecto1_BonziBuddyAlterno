@@ -1,4 +1,4 @@
-public class Kingston16GB implements Ram{
+public class Kingston16GB implements RAM{
 
     String marca;
     String nombre;

@@ -1,4 +1,4 @@
-public class Adata16GB implements Ram{
+public class Adata16GB implements RAM{
 
     String marca;
     String nombre;

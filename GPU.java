@@ -8,5 +8,5 @@ public interface GPU{
 
     public void printNombre();
     public String getTipoMemoriaGPU();
-    public void ensamblarTarjetaGrafica();
+    public void ensamblarGpu();
 }

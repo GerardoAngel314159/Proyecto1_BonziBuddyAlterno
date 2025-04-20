@@ -1,4 +1,4 @@
-public class FabricaGPU {
+public class FabricaGPU extends AbstractFactory{
     @Override
     public Object getComponente(String tipoComponente){
         return getGPU(tipoComponente);

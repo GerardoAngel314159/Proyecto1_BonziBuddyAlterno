@@ -32,12 +32,12 @@ public class RTX4080 implements GPU{
         System.out.println("El tipo de GPU es: " + nombre);
     }   
 
-    public void ensamblarTarjetaGrafica(){
+    public void ensamblarGpu(){
         marca = "NVIDIA";
         tipo = Tipo.GPU;
-        nombre = "RTX 3060";
-        descripcion = "Tarjeta gráfica NVIDIA RTX 3060";
-        precio = 957.79;
-        tipoMemoriaGPU = "GDDR6";
+        nombre = "RTX 4080";
+        descripcion = "Tarjeta gráfica NVIDIA RTX 4080";
+        precio = 350.0;
+        tipoMemoriaGPU = "GDDR6X";
     }
 }

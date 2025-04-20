@@ -5,7 +5,7 @@ public class FabricaRAM extends AbstractFactory{
     }
 
 
-    public Ram getRam(String tipoRam){
+    public RAM getRam(String tipoRam){
         if(tipoRam == null){
             return null;
         }
