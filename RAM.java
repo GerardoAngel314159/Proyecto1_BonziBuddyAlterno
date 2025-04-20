@@ -1,3 +1,6 @@
+/**
+ * Interfaz que define operaciones basicas para un modulo de memoria RAM.
+ */
 public interface RAM {
     public String getMarca();
     public int getTamañoMemoria();

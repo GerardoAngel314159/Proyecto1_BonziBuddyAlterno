@@ -1,37 +1,111 @@
-public class RTX4080 implements GPU{
- 
+/**
+ * Clase que representa una GPU NVIDIA RTX 4080.
+ * Implementa la interfaz GPU.
+ */
+public class RTX4080 implements GPU {
+
+    /**
+     * Marca del dispositivo.
+     */
     String marca;
+
+    /**
+     * Nombre o modelo de la GPU.
+     */
     String nombre;
+
+    /**
+     * Tipo de dispositivo (GPU).
+     */
     Tipo tipo;
+
+    /**
+     * Precio en dolares de la GPU.
+     */
     double precio;
+
+    /**
+     * Descripcion del producto.
+     */
     String descripcion;
+
+    /**
+     * Tipo de memoria que usa la GPU.
+     */
     String tipoMemoriaGPU;
-    
-    public String getTipoMemoriaGPU(){
+
+    /**
+     * Obtiene el tipo de memoria de la GPU.
+     *
+     * @return tipo de memoria
+     */
+    @Override
+    public String getTipoMemoriaGPU() {
         return tipoMemoriaGPU;
     }
 
-    public String getMarca(){
+    /**
+     * Obtiene la marca de la GPU.
+     *
+     * @return marca del dispositivo
+     */
+    @Override
+    public String getMarca() {
         return marca;
     }
 
-    public String getNombre(){
+    /**
+     * Obtiene el nombre o modelo de la GPU.
+     *
+     * @return nombre del dispositivo
+     */
+    @Override
+    public String getNombre() {
         return nombre;
     }
-    public Tipo getTipo(){
+
+    /**
+     * Obtiene el tipo de dispositivo.
+     *
+     * @return tipo 
+     */
+    @Override
+    public Tipo getTipo() {
         return tipo;
     }
-    public double getPrecio(){
+
+    /**
+     * Obtiene el precio de la GPU.
+     *
+     * @return precio en dolares
+     */
+    @Override
+    public double getPrecio() {
         return precio;
     }
-    public String getDescripcion(){
+
+    /**
+     * Obtiene la descripcion del producto.
+     *
+     * @return descripcion de la GPU
+     */
+    @Override
+    public String getDescripcion() {
         return descripcion;
     }
 
-    public void printNombre(){
+    /**
+     * Imprime en consola el nombre de la GPU.
+     */
+    @Override
+    public void printNombre() {
         System.out.println("El tipo de GPU es: " + nombre);
-    }   
+    }
 
+    /**
+     * Inicializa los atributos de la GPU con valores predefinidos.
+     */
+    @Override
     public void ensamblarGpu(){
         marca = "NVIDIA";
         tipo = Tipo.GPU;

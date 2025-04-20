@@ -1,3 +1,6 @@
+/**
+ * Interface que define operaciones basicas para una unidad de procesamiento grafico (GPU).
+ */
 public interface GPU{
     public String getMarca();
     public String getNombre();

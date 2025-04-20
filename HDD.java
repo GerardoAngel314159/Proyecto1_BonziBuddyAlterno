@@ -1,3 +1,9 @@
+/**
+ * Interfaz HDD
+ *
+ * Representa las operaciones basicas que debe implementar un componente de disco duro (HDD)
+ * en el sistema de ensamblaje de computadoras.
+ */
 public interface HDD{
     public String getMarca();
     public int getCapacidadAlmacenamiento();
