@@ -7,8 +7,8 @@ public class Windows10 extends Software{
      * Constructor de la clase 
      * @param computadoraCentro de tipo Computadora
      */
-    public Windows10 (Computadora computadoraCentro){
-        super(computadoraCentro);
+    public Windows10 (ComponenteComputadora componenteCentral){
+        super(componenteCentral);
     }
 
     /**
@@ -16,7 +16,7 @@ public class Windows10 extends Software{
      * @return String con valor de el nombre de la computadora mas Windows 10
      */
     public String getNombre(){
-        return computadoraCentro.getNombre + ", Windows 10";
+        return super.getNombre() + ", Windows 10";
     }
 
     /**
@@ -24,6 +24,6 @@ public class Windows10 extends Software{
      * @return Int con valor de la computadora mas el software 
      */
     public int getCosto(){
-        return computadoraCentro.getCosto + 500;
+        return computadoraCentro.getCosto() + 500;
     }
 }

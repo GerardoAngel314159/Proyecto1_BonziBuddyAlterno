@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Computadora{
+public class Computadora extends ComponenteComputadora{
 
     private GPU gpu;
     private HDD hdd;
@@ -12,6 +12,7 @@ public class Computadora{
     private Motherboard motherboard;
     private double precioTotal;
     private String nombre;
+    private int costo;
 
     public Computadora(GPU gpu, HDD hdd, SSD ssd, ArrayList<RAM> memoriaRAM, Procesador procesador, FuenteAlimentacion fuenteAlimentacion, Gabinetes gabinete, Motherboard motherboard) {
         this.gpu = gpu;
@@ -52,6 +53,14 @@ public class Computadora{
         for(RAM ram : memoriaRAM){
             precioTotal += ram.getPrecio();
         }
+    }
+
+    public String getNombre(){
+        return nombre;
+    }
+
+    public int getCosto(){
+        return costo;
     }
 
     public void exhibir(){

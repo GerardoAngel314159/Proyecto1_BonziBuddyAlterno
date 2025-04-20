@@ -2,17 +2,17 @@
  * Clase abstracta que representa a el software con el cual se podra decorar a la computadora en caso
  * de que usuario quiera agregar un software a su computadora
  */
-public abstract class Software extends Computadora{
+public abstract class Software extends ComponenteComputadora{
 
     /**Representa a la computadora a la cual se va a decorar con software */
-    protected Computadora computadoraCentro;
+    protected ComponenteComputadora computadoraCentro;
 
 
     /**
      * Metodo constructor de la clase
      * @param computadoraCentro de tipo Computadora
      */
-    public Software(Computadora computadoraCentro){
+    public Software(ComponenteComputadora computadoraCentro){
         this.computadoraCentro = computadoraCentro;
     }
 
