@@ -1,42 +1,116 @@
+/**
+ * Clase que implementa la interfaz FuenteAlimentacion para el modelo EVGA 1500W.
+ */
 public class EVGA1500W implements FuenteAlimentacion {
-    
+
+    /**
+     * Marca del fabricante.
+     */
     String marca;
+
+    /**
+     * Nombre o modelo de la fuente.
+     */
     String nombre;
+
+    /** 
+     * Tipo de componente (enumeracion Tipo).
+     */
     Tipo tipo;
+
+    /**
+     * Precio en unidades monetarias.
+     */
     double precio;
+
+    /**
+     * Descripcion detallada del producto.
+     */
     String descripcion;
+
+    /**
+     * Potencia maxima en vatios.
+     */
     int potenciaMaxima;
 
-    public int getPotenciaMaxima(){
+    /**
+     * Obtiene la potencia maxima soportada por la fuente.
+     *
+     * @return la potencia maxima en vatios
+     */
+    @Override
+    public int getPotenciaMaxima() {
         return potenciaMaxima;
     }
-    
-    public String getMarca(){
+
+    /**
+     * Obtiene la marca del fabricante.
+     *
+     * @return la marca de la fuente
+     */
+    @Override
+    public String getMarca() {
         return marca;
     }
 
-    public String getNombre(){
+    /**
+     * Obtiene el nombre o modelo de la fuente.
+     *
+     * @return el nombre del modelo
+     */
+    @Override
+    public String getNombre() {
         return nombre;
     }
-    public Tipo getTipo(){
+
+    /**
+     * Obtiene el tipo de componente.
+     *
+     * @return el tipo segun la enumeracion Tipo
+     */
+    @Override
+    public Tipo getTipo() {
         return tipo;
     }
-    public double getPrecio(){
+
+    /**
+     * Obtiene el precio de la fuente.
+     *
+     * @return el precio en unidades monetarias
+     */
+    @Override
+    public double getPrecio() {
         return precio;
     }
-    public String getDescripcion(){
+
+    /**
+     * Obtiene la descripcion del producto.
+     *
+     * @return la descripcion detallada
+     */
+    @Override
+    public String getDescripcion() {
         return descripcion;
     }
 
-    public void printNombre(){
+    /**
+     * Imprime en consola el nombre del modelo.
+     */
+    @Override
+    public void printNombre() {
         System.out.println("El tipo de fuente de alimentacion es: " + nombre);
-    }  
+    }
 
+    /**
+     * Ensambla y configura los valores de la fuente de alimentacion.
+     * Asigna marca, tipo, nombre, descripcion, precio y potencia maxima.
+     */
+    @Override
     public void ensamblarFuenteAlimentacion(){
         marca = "EVGA";
         tipo = Tipo.FUENTE_ALIMENTACION;
-        nombre = "EVGA 1000W";
-        descripcion = "";
+        nombre = "EVGA 1500W";
+        descripcion = "Cuenta con la certificacion 80 PLUS GOLD";
         precio = 366.54;
         potenciaMaxima = 1000;
     }

@@ -1,37 +1,111 @@
-public class Corei5 implements  Procesador{
+/**
+ * Clase que representa un procesador Intel Core i5-13600.
+ * Implementa la interfaz Procesador.
+ */
+public class Corei5 implements Procesador {
 
+    /**
+     * Marca del procesador.
+     */
     String marca;
+
+    /**
+     * Nombre o modelo del procesador.
+     */
     String nombre;
+
+    /**
+     * Tipo de dispositivo.
+     */
     Tipo tipo;
+
+    /**
+     * Precio en dolares del procesador.
+     */
     double precio;
+
+    /**
+     * Descripcion del producto.
+     */
     String descripcion;
+
+    /**
+     * Numero de nucleos del procesador.
+     */
     int nucleos;
 
-    public int getNucleos(){
+    /**
+     * Obtiene el numero de nucleos del procesador.
+     *
+     * @return numero de nucleos
+     */
+    @Override
+    public int getNucleos() {
         return nucleos;
     }
 
-    public String getMarca(){
+    /**
+     * Obtiene la marca del procesador.
+     *
+     * @return marca del dispositivo
+     */
+    @Override
+    public String getMarca() {
         return marca;
     }
 
-    public String getNombre(){
+    /**
+     * Obtiene el nombre o modelo del procesador.
+     *
+     * @return nombre del dispositivo
+     */
+    @Override
+    public String getNombre() {
         return nombre;
     }
-    public Tipo getTipo(){
+
+    /**
+     * Obtiene el tipo de dispositivo.
+     *
+     * @return tipo 
+     */
+    @Override
+    public Tipo getTipo() {
         return tipo;
     }
-    public double getPrecio(){
+
+    /**
+     * Obtiene el precio del procesador.
+     *
+     * @return precio en dolares
+     */
+    @Override
+    public double getPrecio() {
         return precio;
     }
-    public String getDescripcion(){
+
+    /**
+     * Obtiene la descripcion del producto.
+     *
+     * @return descripcion del procesador
+     */
+    @Override
+    public String getDescripcion() {
         return descripcion;
     }
 
-    public void printNombre(){
+    /**
+     * Imprime en consola el nombre del procesador.
+     */
+    @Override
+    public void printNombre() {
         System.out.println("El tipo de cpu es: " + nombre);
-    } 
+    }
 
+    /**
+     * Inicializa los atributos del procesador con valores predefinidos.
+     */
+    @Override
     public void ensamblarProcesador(){
         marca = "Intel";
         tipo = Tipo.PROCESADOR;

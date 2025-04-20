@@ -1,3 +1,8 @@
+/**
+ * Interfaz que representa una fuente de alimentacion.
+ * Define los metodos necesarios para obtener la informacion
+ * y realizar acciones basicas sobre la fuente de alimentacion.
+ */
 public interface FuenteAlimentacion{
     public String getMarca();
     public String getNombre();
