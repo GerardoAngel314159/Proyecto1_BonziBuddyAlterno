@@ -1,57 +1,89 @@
 import java.util.ArrayList;
 
 /**
- * Clase que representa a Windows 10, software que se puede agregar a la computadora del comprador
+ * Clase que representa a WLS, software que se puede agregar a la computadora del comprador.
  */
-public class WLS extends Software{
+public class WLS extends Software {
 
     /**
-     * Constructor de la clase 
-     * @param computadoraCentro de tipo Computadora
+     * Constructor de la clase.
+     *
+     * @param computadoraCentro La computadora que se decorara con WLS.
      */
-    public WLS (ComponenteComputadora computadoraCentro){
+    public WLS(ComponenteComputadora computadoraCentro) {
         super(computadoraCentro);
-        if (computadoraCentro.getSoftware().contains("wls")){
+        if (computadoraCentro.getSoftware().contains("wls")) {
             throw new IllegalArgumentException("Ya tiene WLS");
+        } else {
+            computadoraCentro.getSoftware().add("wls");
         }
-        else
-        computadoraCentro.getSoftware().add("wls");
     }
 
     /**
-     * Metodo que regresa el nombre de la computadora
-     * @return String con valor de el nombre de la computadora mas Windows 10
+     * Metodo que regresa el nombre de la computadora decorada.
+     *
+     * @return Nombre de la computadora decorada con WLS.
      */
-    public String getNombre(){
+    @Override
+    public String getNombre() {
         return super.getNombre();
     }
 
     /**
-     * Metodo que regresa el costo de la computadora mas el costo del software
-     * @return Int con valor de la computadora mas el software 
+     * Metodo que regresa el costo total de la computadora decorada mas el costo de WLS.
+     *
+     * @return Costo total de la computadora mas WLS.
      */
-    public double getCosto(){
+    @Override
+    public double getCosto() {
         return computadoraCentro.getCosto() + 250;
     }
 
-    public ArrayList<String> getSoftware(){
+    /**
+     * Retorna la lista de software de la computadora decorada.
+     *
+     * @return ArrayList con el software.
+     */
+    @Override
+    public ArrayList<String> getSoftware() {
         return computadoraCentro.getSoftware();
     }
 
-    public void exhibir(){
+    /**
+     * Muestra por consola la informacion de la computadora decorada.
+     */
+    @Override
+    public void exhibir() {
         computadoraCentro.exhibir();
         System.out.println("\nSoftware: WLS");
     }
 
-    public String getTicket(){
+    /**
+     * Retorna el ticket concatenado con el costo total.
+     *
+     * @return Ticket de la computadora decorada.
+     */
+    @Override
+    public String getTicket() {
         return parcialTicket() + "\n" + "\nCosto total: " + getCosto();
     }
 
-    public String parcialTicket(){
+    /**
+     * Regresa un parcial del ticket que incluye WLS.
+     *
+     * @return Parte del ticket.
+     */
+    public String parcialTicket() {
         return computadoraCentro.parcialTicket() + "\nWLS";
     }
 
-    public String getDescripcion(){
+    /**
+     * Regresa la descripcion de la computadora decorada con WLS.
+     *
+     * @return Descripcion de la computadora.
+     */
+    @Override
+    public String getDescripcion() {
         return computadoraCentro.getDescripcion() + "\nWLS";
     }
 }
