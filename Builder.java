@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 
 public class Builder{
+    String nombre;
     private GPU gpu;
     private HDD hdd;
     private SSD ssd;
@@ -65,7 +66,11 @@ public class Builder{
 
     public Computadora build(){
         ensamblar();
-        return new Computadora(gpu, hdd, ssd, memoriaRAM, procesador, fuenteAlimentacion, gabinete, motherboard);
+        return new Computadora(gpu, hdd, ssd, memoriaRAM, procesador, fuenteAlimentacion, gabinete, motherboard, nombre);
+    }
+
+    public void nombre(String nombre){
+        this.nombre = nombre;
     }
 
     private void ensamblar(){

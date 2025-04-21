@@ -11,19 +11,21 @@ public class FabricaHDD extends AbstractFactory{
         }
 
         switch (tipoHDD.toLowerCase()){
-            case "seagatehdd1tb" -> {
+            case "sb1" -> {
                 return new SeagateHDD1TB();
             }
-            case "seagatehdd2tb" -> {
+            case "sb2" -> {
                 return new SeagateHDD2TB();
             }
-            case "westernhdd500gb" -> {
+            case "wdb5" -> {
                 return new WesternHDD500GB();
             }
-            case "westernhdd1tb" -> {
+            case "wdb1" -> {
                 return new WesternHDD1TB();
             }
-            default -> throw new AssertionError("HDD no encontrada");
+            default -> {
+                return null;
+            }
         }
     }
 }

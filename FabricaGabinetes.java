@@ -26,13 +26,15 @@ public class FabricaGabinetes extends AbstractFactory{
         }
 
         switch (tipoGabinete.toLowerCase()){
-            case "h6flowatx" -> {
+            case "h6f" -> {
                 return new H6FlowATX();
             }
-            case "lanceratx" -> {
+            case "latx" -> {
                 return new LancerATX();
             }
-            default -> throw new AssertionError("Gabinete no encontrado");
+            default -> {
+                return null;
+            }
         }
     }
 }

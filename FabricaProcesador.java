@@ -11,19 +11,21 @@ public class FabricaProcesador extends AbstractFactory{
         }
 
         switch (tipoProcesador.toLowerCase()){
-            case "corei3" -> {
+            case "i3" -> {
                 return new Corei3();
             }
-            case "corei5" -> {
+            case "i5" -> {
                 return new Corei5();
             }
-            case "corei7" -> {
+            case "i7" -> {
                 return new Corei7();
             }
-            case "corei9" -> {
+            case "i9" -> {
                 return new Corei9();
             }
-            default -> throw new AssertionError("Procesador no encontrado");
+            default -> {
+                return null;
+            }
         }
     }
 }   

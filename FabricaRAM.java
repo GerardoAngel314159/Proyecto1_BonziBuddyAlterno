@@ -11,25 +11,27 @@ public class FabricaRAM extends AbstractFactory{
         }
 
         switch (tipoRam.toLowerCase()){
-            case "adata8gb" -> {
+            case "a8" -> {
                 return new Adata8GB();
             }
-            case "adata16gb" -> {
+            case "a16" -> {
                 return new Adata16GB();
             }
-            case "adata32gb" -> {
+            case "a32" -> {
                 return new Adata32GB();
             }
-            case "kingstone8gb" -> {
+            case "k8" -> {
                 return new Kingston8GB();
             }
-            case "kingstone16gb" -> {
+            case "k16" -> {
                 return new Kingston16GB();
             }
-            case "kingstone32gb" -> {
+            case "k32" -> {
                 return new Kingston32GB();
             }
-            default -> throw new AssertionError("RAM no encontrada");
+            default -> {
+                return null;
+            }
         }
     }
 }

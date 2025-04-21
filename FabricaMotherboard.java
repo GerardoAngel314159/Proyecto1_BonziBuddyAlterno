@@ -11,16 +11,16 @@ public class FabricaMotherboard extends AbstractFactory{
         }
 
         switch (tipoMotherboard.toLowerCase()){
-            case "rogmaximusz790hero" -> {
+            case "rog" -> {
                 return new ROGMaximusZ790Hero();
             }
-            case "tufgamingb760oluswifid4" -> {
+            case "tuf" -> {
                 return new TUFGamingB760PlusWIFID4();
             }
-            case "meggodlike" -> {
+            case "meg" -> {
                 return new MEGGodlike();
             }
-            case "magb760tomahowkwifiddr4" -> {
+            case "mag" -> {
                 return new MAGB760TomahawkWIFIDDR4();
             }
             default -> throw new AssertionError("Motherboard no encontrada");

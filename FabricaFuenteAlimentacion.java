@@ -1,3 +1,6 @@
+
+import java.nio.file.attribute.AclEntry;
+
 public class FabricaFuenteAlimentacion extends AbstractFactory{
     @Override
     public Object getComponente(String tipoComponente){
@@ -5,38 +8,38 @@ public class FabricaFuenteAlimentacion extends AbstractFactory{
     }
 
 
-    public RAM getFuenteAlimentacion(String tipoRam){
+    public FuenteAlimentacion getFuenteAlimentacion(String tipoRam){
         if(tipoRam == null){
             return null;
         }
 
         switch (tipoRam.toLowerCase()){
-            case "evga800w" -> {
-                return new Adata8GB();
+            case "ev8" -> {
+                return new EVGA800W();
             }
-            case "evga1000w" -> {
-                return new Adata16GB();
+            case "ev10" -> {
+                return new EVGA1000W();
             }
-            case "evga1500w" -> {
-                return new Adata32GB();
+            case "ev15" -> {
+                return new EVGA1500W();
             }
-            case "corsair1500w" -> {
-                return new Kingston8GB();
+            case "c8" -> {
+                return new Corsair800W();
             }
-            case "corsair800w" -> {
-                return new Kingston16GB();
+            case "c12" -> {
+                return new Corsair1200W();
             }
-            case "corsair1200w" -> {
-                return new Kingston32GB();
+            case "c15" -> {
+                return new Corsair1500W();
             }
-            case "xpg500w" -> {
-                return new Kingston8GB();
+            case "x5" -> {
+                return new XPG500W();
             }
-            case "xpg700w" -> {
-                return new Kingston16GB();
+            case "x6" -> {
+                return new XPG700W();
             }
-            case "xpg1000w" -> {
-                return new Kingston32GB();
+            case "x10" -> {
+                return new XPG1000W();
             }
             default -> throw new AssertionError("RAM no encontrada");
         }

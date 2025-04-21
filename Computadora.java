@@ -1,20 +1,24 @@
 import java.util.ArrayList;
 
-public class Computadora extends ComponenteComputadora{
+public class Computadora implements ComponenteComputadora{
 
-    private GPU gpu;
-    private HDD hdd;
-    private SSD ssd;
-    private ArrayList<RAM> memoriaRAM;
-    private Procesador procesador;
-    private FuenteAlimentacion fuenteAlimentacion;
-    private Gabinetes gabinete;
-    private Motherboard motherboard;
-    private double precioTotal;
-    private String nombre;
-    private int costo;
+    private final GPU gpu;
+    private final HDD hdd;
+    private final SSD ssd;
+    private final ArrayList<RAM> memoriaRAM;
+    private final Procesador procesador;
+    private final FuenteAlimentacion fuenteAlimentacion;
+    private final Gabinetes gabinete;
+    private final Motherboard motherboard;
+    private double costo;
+    private final String nombre;
+    private String descripcion;
+    private ArrayList<String> software;
 
-    public Computadora(GPU gpu, HDD hdd, SSD ssd, ArrayList<RAM> memoriaRAM, Procesador procesador, FuenteAlimentacion fuenteAlimentacion, Gabinetes gabinete, Motherboard motherboard) {
+    public Computadora(GPU gpu, HDD hdd, SSD ssd, ArrayList<RAM> memoriaRAM, 
+    Procesador procesador, FuenteAlimentacion fuenteAlimentacion, 
+    Gabinetes gabinete, Motherboard motherboard, String nombre) {
+        this.nombre = nombre;
         this.gpu = gpu;
         this.hdd = hdd;
         this.ssd = ssd;
@@ -23,27 +27,28 @@ public class Computadora extends ComponenteComputadora{
         this.fuenteAlimentacion = fuenteAlimentacion;
         this.gabinete = gabinete;
         this.motherboard = motherboard;
+        this.software = new ArrayList<>();
 
-        nombre();
-        precioTotal();
+        descripcion();
+        costo();
     }
 
-    public void nombre(){
-        nombre = "Computadora ensamblada:";
-        nombre += "\nGPU: " + gpu.getNombre();
-        nombre += "\nHDD: " + hdd.getNombre();
-        nombre += "\nSSD: " + ssd.getNombre();
+    private void descripcion(){
+        descripcion = "Computadora ensamblada:";
+        descripcion += "\nGPU: " + gpu.getNombre();
+        descripcion += "\nHDD: " + hdd.getNombre();
+        descripcion += "\nSSD: " + ssd.getNombre();
         for(RAM ram : memoriaRAM){
-            nombre += "\nRAM: " + ram.getNombre();
+            descripcion += "\nRAM: " + ram.getNombre();
         }
-        nombre += "\nProcesador: " + procesador.getNombre();
-        nombre += "\nFuente de Alimentación: " + fuenteAlimentacion.getNombre();
-        nombre += "\nGabinete: " + gabinete.getNombre();
-        nombre += "\nMotherboard: " + motherboard.getNombre();
+        descripcion += "\nProcesador: " + procesador.getNombre();
+        descripcion += "\nFuente de Alimentación: " + fuenteAlimentacion.getNombre();
+        descripcion += "\nGabinete: " + gabinete.getNombre();
+        descripcion += "\nMotherboard: " + motherboard.getNombre();
     }
 
-    private void precioTotal(){
-        precioTotal = gpu.getPrecio() + 
+    private void costo(){
+        costo = gpu.getPrecio() + 
         hdd.getPrecio() + 
         ssd.getPrecio() + 
         procesador.getPrecio() + 
@@ -51,7 +56,7 @@ public class Computadora extends ComponenteComputadora{
         gabinete.getPrecio() + 
         motherboard.getPrecio();
         for(RAM ram : memoriaRAM){
-            precioTotal += ram.getPrecio();
+            costo += ram.getPrecio();
         }
     }
 
@@ -59,57 +64,50 @@ public class Computadora extends ComponenteComputadora{
         return nombre;
     }
 
-    public int getCosto(){
+    public String getDescripcion(){
+        return descripcion;
+    }
+
+    public double getCosto(){
         return costo;
     }
 
+    @Override
+    public String getTicket(){
+
+        String ticket = parcialTicket();
+        ticket += "\nninguno";
+        ticket += "\nCosto total " + costo + "\n";
+        return ticket;
+    }
+
+    public String parcialTicket(){
+        String ticket = "Ticket de compra: \n";
+        ticket += "Computadora " + nombre + "\n";
+        ticket += "\nComponentes:";
+        ticket += "\n\tGPU: " + gpu.getNombre() + " " + gpu.getPrecio();
+        ticket += "\n\tHDD: " + hdd.getNombre() + " " + hdd.getPrecio();
+        ticket += "\n\tSSD: " + ssd.getNombre() + " " + ssd.getPrecio();
+        for(RAM ram : memoriaRAM){
+            ticket += "\tRAM: " + ram.getNombre() + " " + ram.getPrecio();
+        }
+        ticket += "\n\tProcesador: " + procesador.getNombre() + " " + procesador.getPrecio();
+        ticket += "\n\tFuente de Alimentación: " + fuenteAlimentacion.getNombre() + " " + fuenteAlimentacion.getPrecio();
+        ticket += "\n\tGabinete: " + gabinete.getNombre() + " " + gabinete.getPrecio();
+        ticket += "\n\tMotherboard: " + motherboard.getNombre() + " " + motherboard.getPrecio();
+        ticket += "\n\nIncompatibilidades:\n";
+        ticket += (procesador.getMarca().equalsIgnoreCase("ryzen")) ? 
+        "El gpu nvidia y cpu ryzen pueden ser incompatibles" : "ninguna";
+        ticket += "\n\nSoftware adicional: \n";
+
+        return ticket;
+    }
+
     public void exhibir(){
-        System.out.println(nombre);
-        System.out.println("\nPrecio total: " + precioTotal);
+        System.out.println(getTicket());
     }
 
-    public void setGpu(GPU gpu) {
-        this.gpu = gpu;
-        nombre();
-        precioTotal();
-    }
-    public void setHdd(HDD hdd) {
-        this.hdd = hdd;
-        nombre();
-        precioTotal();
-    }
-    public void setSsd(SSD ssd) {
-        this.ssd = ssd;
-        nombre();
-        precioTotal();
-    }
-    public void setMemoriaRAM(ArrayList<RAM> memoriaRAM) {
-        this.memoriaRAM = memoriaRAM;
-        nombre();
-        precioTotal();
-    }
-    public void setProcesador(Procesador procesador) {
-        this.procesador = procesador;
-        nombre();
-        precioTotal();
-    }
-    public void setFuenteAlimentacion(FuenteAlimentacion fuenteAlimentacion) {
-        this.fuenteAlimentacion = fuenteAlimentacion;
-        nombre();
-        precioTotal();
-    }
-    public void setGabinete(Gabinetes gabinete) {
-        this.gabinete = gabinete;
-        nombre();
-        precioTotal();
-    }
-    public void setMotherboard(Motherboard motherboard) {
-        this.motherboard = motherboard;
-        nombre();
-        precioTotal();
-    }
-
-    public void nombre(String nombre) {
-        this.nombre = nombre;
+    public ArrayList<String> getSoftware(){
+        return software;
     }
 }

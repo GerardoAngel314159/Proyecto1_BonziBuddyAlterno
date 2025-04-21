@@ -10,23 +10,19 @@ public class FabricaGPU extends AbstractFactory{
             return null;
         }
 
-        switch (tipoGPU.toLowerCase()){
-            case "rtx3060" -> {
+        switch (tipoGPU.toLowerCase()) {
+            case "r306":
                 return new RTX3060();
-            }
-            case "rtx4070" -> {
+            case "r407":
                 return new RTX4070();
-            }
-            case "rtx4080" -> {
+            case "r408":
                 return new RTX4080();
-            }
-            case "rtx4090" -> {
+            case "r409":
                 return new RTX4090();
-            }
-            case "gtx1660" -> {
+            case "g166":
                 return new GTX1660();
-            }
-            default -> throw new AssertionError("HDD no encontrada");
+            default:
+                return null;
         }
     }
 }

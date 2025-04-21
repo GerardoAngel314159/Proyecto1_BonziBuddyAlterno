@@ -11,16 +11,16 @@ public class FabricaSSD extends AbstractFactory{
         }
 
         switch (tipoSSD.toLowerCase()){
-            case "ssd500gb" -> {
+            case "k500" -> {
                 return new SSD500GB();
             }
-            case "ssd1tb" -> {
+            case "k1" -> {
                 return new SSD1TB();
             }
-            case "ssd2tb" -> {
+            case "k2" -> {
                 return new SSD2TB();
             }
-            case "ssd4tb" -> {
+            case "k4" -> {
                 return new SSD4TB();
             }
             default -> throw new AssertionError("SSD no encontrado");
