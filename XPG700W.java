@@ -6,32 +6,32 @@ public class XPG700W implements FuenteAlimentacion {
     /**
      * Marca del fabricante.
      */
-    String marca;
+    private String marca;
 
     /**
      * Nombre o modelo de la fuente.
      */
-    String nombre;
+    private String nombre;
 
     /** 
      * Tipo de componente (enumeracion Tipo).
      */
-    Tipo tipo;
+    private Tipo tipo;
 
     /**
      * Precio en unidades monetarias.
      */
-    double precio;
+    private double precio;
 
     /**
      * Descripcion detallada del producto.
      */
-    String descripcion;
+    private String descripcion;
 
     /**
      * Potencia maxima en vatios.
      */
-    int potenciaMaxima;
+    private int potenciaMaxima;
 
     /**
      * Obtiene la potencia maxima soportada por la fuente.

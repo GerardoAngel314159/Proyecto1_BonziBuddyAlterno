@@ -7,32 +7,32 @@ public class Corei5 implements Procesador {
     /**
      * Marca del procesador.
      */
-    String marca;
+    private String marca;
 
     /**
      * Nombre o modelo del procesador.
      */
-    String nombre;
+    private String nombre;
 
     /**
      * Tipo de dispositivo.
      */
-    Tipo tipo;
+    private Tipo tipo;
 
     /**
      * Precio en dolares del procesador.
      */
-    double precio;
+    private double precio;
 
     /**
      * Descripcion del producto.
      */
-    String descripcion;
+    private String descripcion;
 
     /**
      * Numero de nucleos del procesador.
      */
-    int nucleos;
+    private int nucleos;
 
     /**
      * Obtiene el numero de nucleos del procesador.
