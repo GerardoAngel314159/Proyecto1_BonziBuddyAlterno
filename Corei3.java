@@ -27,7 +27,7 @@ public class Corei3 implements Procesador {
     /**
      * Descripcion del producto.
      */
-    privateString descripcion;
+    private String descripcion;
 
     /**
      * Numero de nucleos del procesador.

@@ -3,7 +3,7 @@
  */
 public interface RAM {
     public String getMarca();
-    public int getTamañoMemoria();
+    public int getTamanioMemoria();
     public String getNombre();
     public Tipo getTipo();
     public double getPrecio();

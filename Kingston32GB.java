@@ -50,7 +50,7 @@ public class Kingston32GB implements RAM {
      * @return tamano de memoria en gigabytes
      */
     @Override
-    public int getTamañoMemoria() {
+    public int getTamanioMemoria() {
         return tamañoMemoria;
     }
 
