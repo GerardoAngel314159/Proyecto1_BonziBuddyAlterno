@@ -39,11 +39,13 @@ public class Windows11 extends Software{
     }
 
     public void exhibir(){
-        computadoraCentro.exhibir();
+        System.out.println(computadoraCentro.parcialTicket());
+
         System.out.println("Software: Windows 11");
     }
 
     public String getTicket(){
+        
         return parcialTicket() + "\n" + "\nCosto total: " + getCosto();
     }
 

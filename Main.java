@@ -19,7 +19,7 @@ public class Main {
                         break;
                     }
                     case 2 -> {
-                        System.out.println("Opcion por implementar");
+                        mostrarCatalogo();
                         break;
                     }
                     default -> System.out.println("Opcion no valida");
@@ -30,6 +30,19 @@ public class Main {
                 System.out.println("3. Salir");
                 opcion = scanner.nextInt();
             }
+        }
+    }
+
+
+    public static void mostrarCatalogo(){
+        Catalogo catalogo = new Catalogo();
+        ComponenteComputadora pc = catalogo.computadorasPrehechas();
+        if (pc != null) {
+            System.out.println("\nHas seleccionado la computadora prehecha: " + pc.getNombre());
+            System.out.println("Aquí esta su ticket");
+            System.out.println(pc.getTicket());
+        } else {
+            System.out.println("\nNo se seleccionó ninguna computadora prehecha.");
         }
     }
 
@@ -71,9 +84,84 @@ public class Main {
 
         builder.nombre("Computadora personalizada");
         System.out.println("Felicidades! Has ensamblado tu computadora con los siguientes componentes:");
-        Computadora pc = builder.build();
+        ComponenteComputadora pc = builder.build();
+        System.out.println(pc.getDescripcion());
 
+        pc = agregarSoftware(pc);
         System.out.println(pc.getTicket());
+    }
+
+    private static ComponenteComputadora agregarSoftware(ComponenteComputadora pc){
+        System .out.println("\n¿Deseas agregar software adicional? (si/no)");
+        Scanner sc = new Scanner(System.in);
+        String opcion = sc.nextLine();
+
+        while(true){
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("\n¿Que software deseas agregar?");
+                System.out.println("1. Windows 10");
+                System.out.println("2. Windows 11");
+                System.out.println("3. WLS");
+                System.out.println("4. Photoshop");
+                System.out.println("5. Microsoft Office");
+                System.out.println("6. Autocad");
+                System.out.println("7. Ninguno");
+                int opcionSoftware = sc.nextInt();
+                switch (opcionSoftware) {
+                    case 1 -> {
+                        if (pc.getSoftware().contains("windows10")) {
+                            System.out.println("Ya tiene Windows 10");
+                        } else {
+                            pc = new Windows10(pc);
+                        }
+                    }
+                    case 2 ->{
+                        if (pc.getSoftware().contains("windows11")) {
+                            System.out.println("Ya tiene Windows 11");
+                        } else {
+                            pc = new Windows11(pc);
+                        }
+                    }
+                    case 3 -> {
+                        if (pc.getSoftware().contains("wls")) {
+                            System.out.println("Ya tiene WLS");
+                        } else {
+                            pc = new WLS(pc);
+                        }
+                    }
+                    case 4 -> {
+                        if (pc.getSoftware().contains("photoshop")) {
+                            System.out.println("Ya tiene Photoshop");
+                        } else {
+                            pc = new Photoshop(pc);
+                        }
+                    }
+                    case 5 -> {
+                        if (pc.getSoftware().contains("office")) {
+                            System.out.println("Ya tiene Microsoft Office");
+                        } else {
+                            pc = new Autocad(pc);
+                        }
+                    }
+                    case 6 -> {
+                        if (pc.getSoftware().contains("autocad")) {
+                            System.out.println("Ya tiene Autocad");
+                        } else {
+                            pc = new Autocad(pc);
+                        }
+                    }
+                    default -> System.out.println("Opcion no valida.");
+                }
+            } else break;
+            System.out.println("\n¿Deseas agregar software adicional? (si/no)");
+            opcion = sc.nextLine();
+            opcion = sc.nextLine();
+
+
+        }
+
+
+        return pc;
     }
 
     public static void pedirGabinete(Builder builder, AbstractFactory gabinetes){

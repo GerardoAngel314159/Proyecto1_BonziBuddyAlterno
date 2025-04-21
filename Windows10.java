@@ -48,6 +48,8 @@ public class Windows10 extends Software{
     }
 
     public String parcialTicket(){
+        System.out.println(computadoraCentro.parcialTicket());
+
         return computadoraCentro.parcialTicket() + "\nWindows 10";
     }
 

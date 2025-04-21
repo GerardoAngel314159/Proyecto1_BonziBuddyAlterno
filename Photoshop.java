@@ -39,7 +39,7 @@ public class Photoshop extends Software{
     }
 
     public void exhibir(){
-        computadoraCentro.exhibir();
+        System.out.println(computadoraCentro.parcialTicket());
         System.out.println("\nSoftware: Photoshop");
     }
 

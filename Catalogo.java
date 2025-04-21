@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Catalogo{
     
     public void mostrarFuentesAlimentacion(){
@@ -72,5 +74,33 @@ public class Catalogo{
         System.out.println("4. Adata 8GB (a8)");
         System.out.println("5. Adata 16GB (a16)");
         System.out.println("6. Adata 32GB (a32)");
+    }
+
+    public ComponenteComputadora computadorasPrehechas(){
+        Builder builder = new Builder();
+        Director director = new Director();
+        ComponenteComputadora pcOficina = director.compuOficina(builder);
+        ComponenteComputadora pcGamer = director.compuGamer(builder);
+        System.out.println("\nComputadoras Prehechas:");
+        System.out.println("\n1. Computadora de Oficina");
+        pcOficina.exhibir();
+        System.out.println("\n2. Computadora Gamer");
+        pcGamer.exhibir();
+
+        System.out.println("Qué opcion prefiere? 1) Computadora de Oficina 2) Computadora Gamer");
+        Scanner scanner = new Scanner(System.in);
+        int opcion = scanner.nextInt();
+        switch (opcion) {
+            case 1 -> {
+                return pcOficina;
+            }
+            case 2 -> {
+                return pcGamer;
+            }
+            default -> {
+                System.out.println("Opción no válida.");
+                return null;  
+            }
+        }
     }
 }

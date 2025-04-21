@@ -70,6 +70,7 @@ public class Builder{
     }
 
     public Computadora build(){
+        ensamblar();
         return new Computadora(gpu, hdd, ssd, memoriaRAM, procesador, fuenteAlimentacion, gabinete, motherboard, nombre);
     }
 
@@ -133,5 +134,18 @@ public class Builder{
         fuenteAlimentacion = null;
         gabinete = null;
         motherboard = null;
+    }
+
+    private void ensamblar(){
+        gpu.ensamblarGpu();
+        hdd.ensamblarHDD();
+        ssd.ensamblarSSD();
+        for(RAM ram : memoriaRAM){
+            ram.ensamblarRam();
+        }
+        procesador.ensamblarProcesador();
+        fuenteAlimentacion.ensamblarFuenteAlimentacion();
+        gabinete.ensamblarGabinete();
+        motherboard.ensamblarMotherboard();
     }
 } 
