@@ -23,6 +23,22 @@ public class FabricaProcesador extends AbstractFactory{
             case "i9" -> {
                 return new Corei9();
             }
+            case "r5g" ->{
+                ProcesadorAMD amd = new Ryzen55600G();             
+                return new ProcesadorAMDAdapter(amd);
+            }
+            case "r5x" ->{
+                ProcesadorAMD amd = new Ryzen57600X();             
+                return new ProcesadorAMDAdapter(amd);
+            }
+            case "r7x" ->{
+                ProcesadorAMD amd = new Ryzen77700X();             
+                return new ProcesadorAMDAdapter(amd);
+            }
+            case "r9x" ->{
+                ProcesadorAMD amd = new Ryzen97950X3D();             
+                return new ProcesadorAMDAdapter(amd);
+            }
             default -> {
                 return null;
             }
