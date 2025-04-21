@@ -7,32 +7,32 @@ public class Kingston16GB implements RAM {
     /**
      * Marca del modulo de RAM.
      */
-    String marca;
+    private String marca;
 
     /**
      * Nombre del modelo de RAM.
      */
-    String nombre;
+    private String nombre;
 
     /**
      * Tipo de dispositivo.
      */
-    Tipo tipo;
+    private Tipo tipo;
 
     /**
      * Precio en dolares del modulo.
      */
-    double precio;
+    private double precio;
 
     /**
      * Descripcion del producto.
      */
-    String descripcion;
+    private String descripcion;
 
     /**
      * Tamano de memoria en gigabytes.
      */
-    int tamañoMemoria;
+    private int tamanioMemoria;
 
     /**
      * Obtiene la marca del modulo de RAM.
@@ -51,7 +51,8 @@ public class Kingston16GB implements RAM {
      */
     @Override
     public int getTamanioMemoria() {
-        return tamañoMemoria;
+        return tamanioMemoria;
+
     }
 
     /**
@@ -111,6 +112,6 @@ public class Kingston16GB implements RAM {
         nombre = "Kingston 16GB";
         descripcion = "Memoria RAM Kingston de 16GB";
         precio = 33.65;
-        tamañoMemoria = 16;
+        tamanioMemoria = 16;
     }
 }
