@@ -76,8 +76,8 @@ public class Main {
         pedirGPU(builder, gpu);
         pedirHDD(builder, hdd);
         pedirSSD(builder, ssd);
-        for (int i = 0; i < 4; i++) {
-            pedirRAM(builder, ram);
+        pedirRAM(builder, ram);
+        for (int i = 0; i < 3; i++) {
             System.out.println("Deseas agregar otro modulo de RAM? (si/no)");
             opcion = sc.nextLine();
             if (opcion.equalsIgnoreCase("si")) {
