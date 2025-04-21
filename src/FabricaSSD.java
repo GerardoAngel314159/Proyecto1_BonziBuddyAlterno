@@ -39,7 +39,9 @@ public class FabricaSSD extends AbstractFactory{
             case "k4" -> {
                 return new SSD4TB();
             }
-            default -> throw new AssertionError("SSD no encontrado");
+            default -> {
+                return null;
+            }
         }
     }
 }
