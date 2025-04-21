@@ -1,10 +1,26 @@
-public class FabricaProcesador extends AbstractFactory{
+/**
+ * Fabrica para crear instancias de Procesador segun el tipo.
+ * Esta clase extiende de AbstractFactory.
+ */
+public class FabricaProcesador extends AbstractFactory {
+
+    /**
+     * Retorna un objeto Procesador basado en el tipo especificado.
+     *
+     * @param tipoComponente El tipo de Procesador a crear.
+     * @return Objeto de tipo Object, que puede ser un Procesador o null.
+     */
     @Override
     public Object getComponente(String tipoComponente){
         return getProcesador(tipoComponente);
     }
 
-
+    /**
+     * Crea y retorna una instancia de Procesador en base al tipo especificado.
+     *
+     * @param tipoProcesador Tipo de Procesador a crear.
+     * @return Instancia de Procesador correspondiente al parametro, o null si el parametro es null o no es valido.
+     */
     public Procesador getProcesador(String tipoProcesador){
         if(tipoProcesador == null){
             return null;
@@ -44,4 +60,4 @@ public class FabricaProcesador extends AbstractFactory{
             }
         }
     }
-}   
+}

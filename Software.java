@@ -1,10 +1,10 @@
 /**
- * Clase abstracta que representa a el software con el cual se podra decorar a la computadora en caso
- * de que usuario quiera agregar un software a su computadora
+ * Clase abstracta que representa el software con el cual se podra decorar a la computadora en caso
+ * de que el usuario quiera agregar un software a su computadora.
  */
-public abstract class Software implements ComponenteComputadora{
+public abstract class Software implements ComponenteComputadora {
 
-    /**Representa a la computadora a la cual se va a decorar con software */
+    /** Representa a la computadora a la cual se le va a agregar software. */
     protected ComponenteComputadora computadoraCentro;
 
     protected Boolean Windows10 = false;
@@ -15,43 +15,83 @@ public abstract class Software implements ComponenteComputadora{
     protected Boolean WSL = false;
 
     /**
-     * 
-     * Metodo constructor de la clase
-     * @param computadoraCentro de tipo Computadora
+     * Metodo constructor de la clase.
+     *
+     * @param computadoraCentro La computadora que se decorara con software.
      */
-    public Software(ComponenteComputadora computadoraCentro){
+    public Software(ComponenteComputadora computadoraCentro) {
         this.computadoraCentro = computadoraCentro;
     }
 
-    public String getNombre (){
+    /**
+     * Retorna el nombre de la computadora decorada.
+     *
+     * @return Nombre de la computadora.
+     */
+    public String getNombre() {
         return computadoraCentro.getNombre();
     }
 
-    public double getCosto(){
+    /**
+     * Retorna el costo total de la computadora decorada.
+     *
+     * @return Costo de la computadora.
+     */
+    public double getCosto() {
         return computadoraCentro.getCosto();
     }
 
-    public Boolean hayWindows10(){
+    /**
+     * Indica si la computadora cuenta con Windows 10.
+     *
+     * @return true si cuenta con Windows10, false de lo contrario.
+     */
+    public Boolean hayWindows10() {
         return Windows10;
     }
 
-    public Boolean hayWindows11(){
+    /**
+     * Indica si la computadora cuenta con Windows 11.
+     *
+     * @return true si cuenta con Windows11, false de lo contrario.
+     */
+    public Boolean hayWindows11() {
         return Windows11;
     }
 
-    public Boolean hayPhotoshop(){
+    /**
+     * Indica si la computadora cuenta con Photoshop.
+     *
+     * @return true si cuenta con Photoshop, false de lo contrario.
+     */
+    public Boolean hayPhotoshop() {
         return Photoshop;
     }
 
-    public Boolean hayOffice(){
+    /**
+     * Indica si la computadora cuenta con Office.
+     *
+     * @return true si cuenta con Office, false de lo contrario.
+     */
+    public Boolean hayOffice() {
         return Office;
     }
 
-    public Boolean hayAutocad(){
+    /**
+     * Indica si la computadora cuenta con Autocad.
+     *
+     * @return true si cuenta con Autocad, false de lo contrario.
+     */
+    public Boolean hayAutocad() {
         return Autocad;
     }
 
-    public Boolean hayWSL(){
+    /**
+     * Indica si la computadora cuenta con WSL.
+     *
+     * @return true si cuenta con WSL, false de lo contrario.
+     */
+    public Boolean hayWSL() {
         return WSL;
     }
 }
