@@ -33,19 +33,24 @@ public class Main {
         }
     }
 
-
+    /**
+     * Muestra en consola el catalogo de computadoras prehechas y permite al usuario seleccionar una.
+     */
     public static void mostrarCatalogo(){
         Catalogo catalogo = new Catalogo();
         ComponenteComputadora pc = catalogo.computadorasPrehechas();
         if (pc != null) {
             System.out.println("\nHas seleccionado la computadora prehecha: " + pc.getNombre());
-            System.out.println("Aquí esta su ticket");
+            System.out.println("Aqui esta su ticket");
             System.out.println(pc.getTicket());
         } else {
-            System.out.println("\nNo se seleccionó ninguna computadora prehecha.");
+            System.out.println("\nNo se selecciono ninguna computadora prehecha.");
         }
     }
 
+    /**
+     * Permite al usuario armar su propia computadora mediante opciones interactivas.
+     */
     public static void armarComputadora(){
         Tecnologo tecnologo = new Tecnologo();
 
@@ -63,7 +68,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String opcion;
 
-        System.out.println("\nVamos a armar tu computadora, para cada componente usa el código en parentesis");
+        System.out.println("\nVamos a armar tu computadora, para cada componente usa el codigo en parentesis");
         pedirGabinete(builder, gabinetes);
         pedirProcesador(builder, procesadores);
         pedirMotherboard(builder, motherboards);
@@ -73,7 +78,7 @@ public class Main {
         pedirSSD(builder, ssd);
         for (int i = 0; i < 4; i++) {
             pedirRAM(builder, ram);
-            System.out.println("¿Deseas agregar otro modulo de RAM? (si/no)");
+            System.out.println("Deseas agregar otro modulo de RAM? (si/no)");
             opcion = sc.nextLine();
             if (opcion.equalsIgnoreCase("si")) {
                 pedirRAM(builder, ram);
@@ -91,14 +96,20 @@ public class Main {
         System.out.println(pc.getTicket());
     }
 
+    /**
+     * Permite al usuario agregar software adicional a la computadora ensamblada.
+     *
+     * @param pc Computadora sobre la cual se agregara software.
+     * @return La computadora decorada con el software adicional.
+     */
     private static ComponenteComputadora agregarSoftware(ComponenteComputadora pc){
-        System .out.println("\n¿Deseas agregar software adicional? (si/no)");
+        System.out.println("\nDeseas agregar software adicional? (si/no)");
         Scanner sc = new Scanner(System.in);
         String opcion = sc.nextLine();
 
         while(true){
             if (opcion.equalsIgnoreCase("si")) {
-                System.out.println("\n¿Que software deseas agregar?");
+                System.out.println("\nQue software deseas agregar?");
                 System.out.println("1. Windows 10");
                 System.out.println("2. Windows 11");
                 System.out.println("3. WLS");
@@ -115,7 +126,7 @@ public class Main {
                             pc = new Windows10(pc);
                         }
                     }
-                    case 2 ->{
+                    case 2 -> {
                         if (pc.getSoftware().contains("windows11")) {
                             System.out.println("Ya tiene Windows 11");
                         } else {
@@ -140,7 +151,7 @@ public class Main {
                         if (pc.getSoftware().contains("office")) {
                             System.out.println("Ya tiene Microsoft Office");
                         } else {
-                            pc = new Autocad(pc);
+                            pc = new MicrosoftOffice(pc);
                         }
                     }
                     case 6 -> {
@@ -153,17 +164,19 @@ public class Main {
                     default -> System.out.println("Opcion no valida.");
                 }
             } else break;
-            System.out.println("\n¿Deseas agregar software adicional? (si/no)");
+            System.out.println("\nDeseas agregar software adicional? (si/no)");
             opcion = sc.nextLine();
             opcion = sc.nextLine();
-
-
         }
-
-
         return pc;
     }
 
+    /**
+     * Solicita al usuario seleccionar un gabinete a partir del catalogo y configura el Builder.
+     *
+     * @param builder Objeto Builder utilizado para ensamblar la computadora.
+     * @param gabinetes Fabrica de gabinetes.
+     */
     public static void pedirGabinete(Builder builder, AbstractFactory gabinetes){
         Scanner sc = new Scanner(System.in);
         String opcion;
@@ -185,6 +198,12 @@ public class Main {
         }
     }
 
+    /**
+     * Solicita al usuario seleccionar un procesador a partir del catalogo y configura el Builder.
+     *
+     * @param builder Objeto Builder utilizado para ensamblar la computadora.
+     * @param procesadores Fabrica de procesadores.
+     */
     public static void pedirProcesador(Builder builder, AbstractFactory procesadores){
         Scanner sc = new Scanner(System.in);
         String opcion;
@@ -206,6 +225,12 @@ public class Main {
         }
     }
 
+    /**
+     * Solicita al usuario seleccionar una motherboard a partir del catalogo y configura el Builder.
+     *
+     * @param builder Objeto Builder utilizado para ensamblar la computadora.
+     * @param motherboards Fabrica de motherboards.
+     */
     public static void pedirMotherboard(Builder builder, AbstractFactory motherboards){
         Scanner sc = new Scanner(System.in);
         String opcion;
@@ -227,6 +252,12 @@ public class Main {
         }
     }
 
+    /**
+     * Solicita al usuario seleccionar una fuente de alimentacion a partir del catalogo y configura el Builder.
+     *
+     * @param builder Objeto Builder utilizado para ensamblar la computadora.
+     * @param fuenteAlimentacion Fabrica de fuentes de alimentacion.
+     */
     public static void pedirFuenteAlimentacion(Builder builder, AbstractFactory fuenteAlimentacion){
         Scanner sc = new Scanner(System.in);
         String opcion;
@@ -248,6 +279,12 @@ public class Main {
         }
     }
 
+    /**
+     * Solicita al usuario seleccionar una GPU a partir del catalogo y configura el Builder.
+     *
+     * @param builder Objeto Builder utilizado para ensamblar la computadora.
+     * @param gpu Fabrica de tarjetas de video (GPU).
+     */
     public static void pedirGPU(Builder builder, AbstractFactory gpu){
         Scanner sc = new Scanner(System.in);
         String opcion;
@@ -269,6 +306,12 @@ public class Main {
         }
     }
 
+    /**
+     * Solicita al usuario seleccionar un HDD a partir del catalogo y configura el Builder.
+     *
+     * @param builder Objeto Builder utilizado para ensamblar la computadora.
+     * @param hdd Fabrica de discos duros (HDD).
+     */
     public static void pedirHDD(Builder builder, AbstractFactory hdd){
         Scanner sc = new Scanner(System.in);
         String opcion;
@@ -290,6 +333,12 @@ public class Main {
         }
     }
 
+    /**
+     * Solicita al usuario seleccionar un SSD a partir del catalogo y configura el Builder.
+     *
+     * @param builder Objeto Builder utilizado para ensamblar la computadora.
+     * @param ssd Fabrica de discos SSD.
+     */
     public static void pedirSSD(Builder builder, AbstractFactory ssd){
         Scanner sc = new Scanner(System.in);
         String opcion;
@@ -311,6 +360,12 @@ public class Main {
         }
     }
 
+    /**
+     * Solicita al usuario seleccionar un modulo de RAM a partir del catalogo y lo agrega al Builder.
+     *
+     * @param builder Objeto Builder utilizado para ensamblar la computadora.
+     * @param ram Fabrica de modulos de RAM.
+     */
     public static void pedirRAM(Builder builder, AbstractFactory ram){
         Scanner sc = new Scanner(System.in);
         String opcion;
@@ -331,5 +386,4 @@ public class Main {
             }
         }
     }
-    
 }

@@ -1,7 +1,14 @@
 import java.util.Scanner;
 
-public class Catalogo{
+/**
+ * Clase Catalogo que muestra los catalogos de componentes disponibles para armar computadoras.
+ * Ademas, permite seleccionar computadoras prehechas mediante una interfaz interactiva.
+ */
+public class Catalogo {
     
+    /**
+     * Muestra en consola el catalogo de fuentes de alimentacion disponibles.
+     */
     public void mostrarFuentesAlimentacion(){
         System.out.println("Fuentes de Alimentacion:");
         System.out.println("1. Corsair 800W (c8)");
@@ -15,12 +22,18 @@ public class Catalogo{
         System.out.println("9. XPG 1000W (x10)");
     }
 
+    /**
+     * Muestra en consola el catalogo de gabinetes disponibles.
+     */
     public void mostrarGabinetes(){
         System.out.println("Gabinetes:");
         System.out.println("1. Gabinete H6FlowATX (h6f)");
         System.out.println("2. Gabinete LancerATX (latx)");
     }
 
+    /**
+     * Muestra en consola el catalogo de motherboards disponibles.
+     */
     public void mostrarMotherboards(){
         System.out.println("Motherboards:");
         System.out.println("1. ROG Maximus Z790 Hero (rog)");
@@ -29,6 +42,9 @@ public class Catalogo{
         System.out.println("4. MAG B760 Tomahawk WIFI DDR4 (mag)");
     }
 
+    /**
+     * Muestra en consola el catalogo de discos duros (HDD) disponibles.
+     */
     public void mostrarHDD(){
         System.out.println("Discos Duros:");
         System.out.println("1. Seagate Barracuda 1TB (sb1)");
@@ -37,6 +53,9 @@ public class Catalogo{
         System.out.println("4. Western Digital Blue 1TB (wdb1)");
     }
 
+    /**
+     * Muestra en consola el catalogo de discos SSD disponibles.
+     */
     public void mostrarSSD(){
         System.out.println("Discos SSD:");
         System.out.println("1. Kingston 500GB (K500)");
@@ -45,15 +64,21 @@ public class Catalogo{
         System.out.println("4. Kingston 4TB (k4)");
     }
 
+    /**
+     * Muestra en consola el catalogo de tarjetas de video (GPU) disponibles.
+     */
     public void mostrarGPU(){
         System.out.println("Tarjetas de Video:");
-        System.out.println("1. Nvidia GTX 1660 (g166)");        
+        System.out.println("1. Nvidia GTX 1660 (g166)");
         System.out.println("2. Nvidia RTX 3060 (r306)");
         System.out.println("3. Nvidia RTX 4070 (r407)");
         System.out.println("4. Nvidia RTX 4080 (r408)");
         System.out.println("5. Nvidia RTX 4090 (r409)");
     }
 
+    /**
+     * Muestra en consola el catalogo de procesadores disponibles.
+     */
     public void mostrarProcesadores(){
         System.out.println("Procesadores:");
         System.out.println("1. Intel Core i3-13100 (i3)");
@@ -66,6 +91,9 @@ public class Catalogo{
         System.out.println("8. AMD Ryzen 9 7950X3D (r9x)");
     }
 
+    /**
+     * Muestra en consola el catalogo de memorias RAM disponibles.
+     */
     public void mostrarRAM(){
         System.out.println("Memorias RAM:");
         System.out.println("1. Kingston 8GB (k8)");
@@ -76,6 +104,13 @@ public class Catalogo{
         System.out.println("6. Adata 32GB (a32)");
     }
 
+    /**
+     * Genera y muestra las computadoras prehechas.
+     * Llama a metodos de Director y Builder para armar opciones preconfiguradas,
+     * y permite al usuario elegir una de ellas.
+     *
+     * @return Instancia de ComponenteComputadora de la computadora seleccionada por el usuario, o null si la opcion es invalida.
+     */
     public ComponenteComputadora computadorasPrehechas(){
         Builder builder = new Builder();
         Director director = new Director();
@@ -87,7 +122,7 @@ public class Catalogo{
         System.out.println("\n2. Computadora Gamer");
         pcGamer.exhibir();
 
-        System.out.println("Qué opcion prefiere? 1) Computadora de Oficina 2) Computadora Gamer");
+        System.out.println("Que opcion prefiere? 1) Computadora de Oficina 2) Computadora Gamer");
         Scanner scanner = new Scanner(System.in);
         int opcion = scanner.nextInt();
         switch (opcion) {
@@ -98,7 +133,7 @@ public class Catalogo{
                 return pcGamer;
             }
             default -> {
-                System.out.println("Opción no válida.");
+                System.out.println("Opcion no valida.");
                 return null;  
             }
         }
