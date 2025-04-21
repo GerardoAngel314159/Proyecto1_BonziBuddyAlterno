@@ -1,6 +1,6 @@
 public class Tecnologo{
 	
-	public static AbstractFactory getFactory(Tipo tipo){
+	public AbstractFactory getFactory(Tipo tipo){
             return switch (tipo) {
                 case MEMORIA_RAM -> new FabricaRAM();
                 case MOTHERBOARD -> new FabricaMotherboard();

@@ -11,6 +11,11 @@ public class Builder{
     private FuenteAlimentacion fuenteAlimentacion;
     private Gabinetes gabinete;
     private Motherboard motherboard;
+
+    public Builder() {
+        this.memoriaRAM = new ArrayList<>();
+    }
+
     
     public void ram(RAM ram){
         if(memoriaRAM.size() >= 4){
@@ -65,25 +70,11 @@ public class Builder{
     }
 
     public Computadora build(){
-        ensamblar();
         return new Computadora(gpu, hdd, ssd, memoriaRAM, procesador, fuenteAlimentacion, gabinete, motherboard, nombre);
     }
 
     public void nombre(String nombre){
         this.nombre = nombre;
-    }
-
-    private void ensamblar(){
-        gpu.ensamblarGpu();
-        hdd.ensamblarHDD();
-        ssd.ensamblarSSD();
-        for(RAM ram : memoriaRAM){
-            ram.ensamblarRam();
-        }
-        procesador.ensamblarProcesador();
-        fuenteAlimentacion.ensamblarFuenteAlimentacion();
-        gabinete.ensamblarGabinete();
-        motherboard.ensamblarMotherboard();
     }
 
     public void muestraPrecio(){
@@ -102,6 +93,37 @@ public class Builder{
         System.out.println("El precio total de la computadora es: " + precioTotal);
     }
 
+    public void muestraPendientes(){
+        System.out.println("Los siguientes componentes no han sido ensamblados:");
+        if(gpu == null){
+            System.out.println("GPU");
+        }
+        if(hdd == null){
+            System.out.println("HDD");
+        }
+        if(ssd == null){
+            System.out.println("SSD");
+        }
+        if(memoriaRAM.isEmpty()){
+            System.out.println("RAM");
+        }
+        if(procesador == null){
+            System.out.println("Procesador");
+        }
+        if(fuenteAlimentacion == null){
+            System.out.println("Fuente de Alimentacion");
+        }
+        if(gabinete == null){
+            System.out.println("Gabinete");
+        }
+        if(motherboard == null){
+            System.out.println("Motherboard");
+        }
+    }
+    /**
+     * Reinicia los componentes de la computadora.
+     * Se utiliza para reiniciar el proceso de ensamblaje.
+     */
     public void reiniciar(){
         gpu = null;
         hdd = null;

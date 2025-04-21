@@ -23,7 +23,9 @@ public class FabricaMotherboard extends AbstractFactory{
             case "mag" -> {
                 return new MAGB760TomahawkWIFIDDR4();
             }
-            default -> throw new AssertionError("Motherboard no encontrada");
+            default -> {
+                return null;
+            }
         }
     }
 }

@@ -1,5 +1,4 @@
 
-import java.nio.file.attribute.AclEntry;
 
 public class FabricaFuenteAlimentacion extends AbstractFactory{
     @Override
@@ -41,7 +40,9 @@ public class FabricaFuenteAlimentacion extends AbstractFactory{
             case "x10" -> {
                 return new XPG1000W();
             }
-            default -> throw new AssertionError("RAM no encontrada");
+            default -> {
+                return null;
+            }
         }
     }
 }

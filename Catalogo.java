@@ -27,7 +27,7 @@ public class Catalogo{
         System.out.println("4. MAG B760 Tomahawk WIFI DDR4 (mag)");
     }
 
-    public void mostrarHDDs(){
+    public void mostrarHDD(){
         System.out.println("Discos Duros:");
         System.out.println("1. Seagate Barracuda 1TB (sb1)");
         System.out.println("2. Seagate Barracuda 2TB (sb2)");
@@ -35,7 +35,7 @@ public class Catalogo{
         System.out.println("4. Western Digital Blue 1TB (wdb1)");
     }
 
-    public void mostrarSSDs(){
+    public void mostrarSSD(){
         System.out.println("Discos SSD:");
         System.out.println("1. Kingston 500GB (K500)");
         System.out.println("2. Kingston 1TB (k1)");
@@ -43,7 +43,7 @@ public class Catalogo{
         System.out.println("4. Kingston 4TB (k4)");
     }
 
-    public void mostrarGPUs(){
+    public void mostrarGPU(){
         System.out.println("Tarjetas de Video:");
         System.out.println("1. Nvidia GTX 1660 (g166)");        
         System.out.println("2. Nvidia RTX 3060 (r306)");
@@ -64,7 +64,7 @@ public class Catalogo{
         System.out.println("8. AMD Ryzen 9 7950X3D (r9x)");
     }
 
-    public void mostrarMemoriasRAM(){
+    public void mostrarRAM(){
         System.out.println("Memorias RAM:");
         System.out.println("1. Kingston 8GB (k8)");
         System.out.println("2. Kingston 16GB (k16)");
